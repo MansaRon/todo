@@ -5,13 +5,11 @@ function NewNotes(props) {
 
     const [inputNote, newInputNote] = useState('');
     const noteHandler = event => {
-        // console.log(event.target.value); 
         newInputNote(event.target.value);
     }
 
     const [inputDate, newInputDate] = useState('');
     const dateHandler = event => {
-        // console.log(event.target.value);
         newInputDate(event.target.value);
     }
 
@@ -25,8 +23,19 @@ function NewNotes(props) {
         console.log(noteObj);
     }
 
+    const saveNote = event => {
+        event.preventDefault();
+        const note = {
+            task: inputNote,
+            date: new Date(inputDate)
+        }
+        saveNewNotes(note);
+        newInputDate('');
+        newInputNote('');
+    }
+
     return (
-    <form onSubmit={saveNewNotes}>
+    <form onSubmit={saveNote}>
         <div className="new_note">
             <div className="new-expense__controls">
                 <div className="new-expense__control">
