@@ -1,1 +1,1 @@
-A ToDo application using React. Here I'm basically just practicing how to use props, useState and using multiple components to create an application. I'll add more functionality as time goes. I use JS and CSS.
+A ToDo application using React. Here I'm basically just practicing how to use props, useState and using multiple components to create an application. I'll add more functionality and cleaning up the UI as time goes. I use JS and CSS.
